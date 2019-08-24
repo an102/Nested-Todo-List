@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="nestedTodos.css">
+    <title>Nested Todo List</title>
+</head>
+
+<body>
+    <div id="top"></div>
+    <h1>Nested Todo List</h1>
+    <div id="master-list-options">
+        <label><input type="checkbox" id="toggle-all-checkbox">Toggle All</label>
+        <button id="delete-completed">Delete Completed Todos</button>
+    </div>
+    <br>
+    <div id="master-list">
+        <button class="add-parent-list-todo">+</button>
+        <br>
+        <ul id="list-1" class="parent-list"></ul>
+    </div>
+</body>
+<script id="todo-list-template" type="text/x-handlebars-template">
+    {{#this}}
+    <li data-id="{{id}}">
+        <input {{#if text}} class="todo-input" {{else}} class="todo-input-initiation" {{/if}} type="text" value="{{text}}">
+        <div {{#if text}} class="options" {{else}} class="invisible" {{/if}}>
+            <button class="delete">x</button>
+            <input type="checkbox" class="todo-checkbox">
+        </div>
+        <br>
+        <button {{#if text}} class="add-parent-list-todo" {{else}} class="invisible" {{/if}}>+</button>
+        <br>
+        <ul id="{{childList}}" class="parent-list"></ul>
+    </li>
+    {{/this}}
+</script>
+<script src="jquery.js"></script>
+<script src="handlebars.js"></script>
+<script src="nestedTodos.js"></script>
+
+</html>

@@ -1,0 +1,96 @@
+#top {
+    background-color: rgba(162, 162, 255, 0.979);
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -400px;
+    height: 500px;
+    width: 1000px;
+    border-radius: 50%;
+}
+
+.invisible {
+    display: none;
+}
+
+.options {
+    display: inline-block;
+}
+
+label {
+    font-family: helvetica;
+    font-size: 9pt;
+    color: white;
+    padding-right: 20px;
+}
+
+#master-list-options {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-family: helvetica;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.todo-input-initiation {
+    border: 0px;
+}
+
+.todo-input-initiation:focus {
+    border-bottom: 0px;
+    outline: none;
+}
+
+.todo-input {
+    border: 0px;
+    border-bottom: 2px solid rgb(83, 82, 82);
+}
+
+.todo-input:focus {
+    border: 0px;
+    border-bottom: 2px solid rgb(83, 82, 82);
+    outline: none;
+}
+
+#master-list {
+    padding-left: 390px;
+}
+
+.parent-list {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.add-parent-list-todo, .delete {
+    border-radius: 50%;
+    margin-bottom: -1px;
+    color: white;
+    border-color: rgb(189, 186, 186);
+}
+
+.add-parent-list-todo:focus, .delete:focus {
+    outline: none;
+}
+
+.add-parent-list-todo {
+    background-color:  rgba(159, 212, 219, 0.979);
+}
+
+.delete {
+    background-color: rgb(248, 148, 195)
+}
+
+#delete-completed {
+    color: white;
+    background-color: rgba(243, 239, 239, 0.267);
+    border-radius: 2%;
+    outline: none;
+}
+
+li {
+    color: rgba(101, 124, 167, 0.849);
+}
