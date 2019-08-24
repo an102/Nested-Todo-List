@@ -56,8 +56,14 @@ h1 {
     outline: none;
 }
 
+#center-div {
+    margin: 0 auto;
+    width: 383px;
+}
+
 #master-list {
-    padding-left: 390px;
+    text-align: left;
+    white-space: nowrap
 }
 
 .parent-list {
