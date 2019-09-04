@@ -55,6 +55,10 @@ jQuery(function ($) {
         },
 
         enterTodoText: function (e) {
+            if (e.which !== 1) {
+              return;
+            }
+          
             var parentList = $(e.target).next().next().attr('id');
             var childListId = this.generateChildListId();
 
@@ -140,6 +144,10 @@ jQuery(function ($) {
         },
 
         delete: function (e) {
+            if (e.which === 2 || e.which === 3) {
+              return;
+            }
+          
             var el = e.target;
             var indexOfElToDelete = this.indexFromEl(el);
             var childListToDelete = this.todos[indexOfElToDelete].childList;
@@ -154,7 +162,11 @@ jQuery(function ($) {
             this.render()
         },
 
-        deleteCompleted: function () {
+        deleteCompleted: function (e) {
+            if (e.which !== 1) {
+              return;
+            }
+          
             var i = this.todos.length;
             var elementDescendantsToDelete = [];
 
@@ -180,6 +192,10 @@ jQuery(function ($) {
         },
 
         toggleCompleted: function (e) {
+            if (e.which !== 1) {
+              return;
+            }
+          
             var el = e.target;
 
             if (el.checked) {
